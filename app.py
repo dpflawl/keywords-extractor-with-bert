@@ -2,8 +2,6 @@ import pandas as pd
 import streamlit as st
 from keybert import KeyBERT
 from samples import texts
-import tensorflow_datasets as tfds
-
 
 @st.cache(allow_output_mutation=True, suppress_st_warning=True, show_spinner=True)
 def load_model():
@@ -25,8 +23,6 @@ sample_id = int(sample_text.split(" ")[-1])
 text_input = placeholder.text_area(
     "Type in some text you want to analyze", value=texts[sample_id - 1], height=300
 )
-
-text_input = tfds.deprecated.text.SubwordTextEncoder.build_from_corpus(text_input, target_vocab_size=2**13)
 
 top_n = st.sidebar.slider("Select number of keywords to extract", 5, 20, 10, 1)
 min_ngram = st.sidebar.number_input("Min ngram", 1, 5, 1, 1)
