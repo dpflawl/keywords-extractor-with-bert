@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 keybert = "*"
 streamlit = "*"
-tensorflow_datasets = "*"
 
 [dev-packages]
 jupyter = "*"
