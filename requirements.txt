@@ -1,6 +1,2 @@
-numpy
-matplotlib
-streamlit
-scipy
-scikit-learn
+tensorflow_datasets
 protobuf~=3.19.0
