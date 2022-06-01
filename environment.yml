@@ -1,4 +1,0 @@
-name: keywords-extractor-with-bert
-dependencies:
-  - pip:
-    - tensorflow_datasets
